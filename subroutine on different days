@@ -1,0 +1,78 @@
+//add to 'this workbook' on the side menu
+
+Private Sub Workbook_Open() //Workbook_Open run the code once the file is open
+
+If Weekday(Now()) = vbThursday Then
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K1")
+        ActiveCell.FormulaR1C1 = "2 Day Cap"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K4")
+        ActiveCell.FormulaR1C1 = "=SUM(125*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K5")
+        ActiveCell.FormulaR1C1 = "=SUM(100*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K6")
+        ActiveCell.FormulaR1C1 = "=SUM(150*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K13")
+        ActiveCell.FormulaR1C1 = "=SUM(9*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K14")
+        ActiveCell.FormulaR1C1 = "=SUM(6*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K15")
+        ActiveCell.FormulaR1C1 = "=SUM(134*2)"
+        MsgBox "Today is Thursday Doubling CAP"
+End If
+
+If Weekday(Now()) = vbMonday Or vbTuesday Or vbWednesday Then
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K1")
+        ActiveCell.FormulaR1C1 = "1 Day Cap"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K4")
+        ActiveCell.FormulaR1C1 = "=SUM(125)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K5")
+        ActiveCell.FormulaR1C1 = "=SUM(100)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K6")
+        ActiveCell.FormulaR1C1 = "=SUM(150)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K13")
+        ActiveCell.FormulaR1C1 = "=SUM(9)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K14")
+        ActiveCell.FormulaR1C1 = "=SUM(6)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K15")
+        ActiveCell.FormulaR1C1 = "=SUM(134)"
+End If
+
+If Weekday(Now()) = vbFriday Then
+myNum = Application.InputBox("Working Sunday? Y/N")
+End If
+
+If myNum = "y" Then
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K1")
+        ActiveCell.FormulaR1C1 = "2 Day Cap"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K4")
+        ActiveCell.FormulaR1C1 = "=SUM(125*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K5")
+        ActiveCell.FormulaR1C1 = "=SUM(100*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K6")
+        ActiveCell.FormulaR1C1 = "=SUM(150*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K13")
+        ActiveCell.FormulaR1C1 = "=SUM(9*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K14")
+        ActiveCell.FormulaR1C1 = "=SUM(6*2)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K15")
+        ActiveCell.FormulaR1C1 = "=SUM(134*2)"
+        MsgBox "Working Sunday; 2 Day CAP"
+Else
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K1")
+        ActiveCell.FormulaR1C1 = "1 Day Cap"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K4")
+        ActiveCell.FormulaR1C1 = "=SUM(125)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K5")
+        ActiveCell.FormulaR1C1 = "=SUM(100)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K6")
+        ActiveCell.FormulaR1C1 = "=SUM(150)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K13")
+        ActiveCell.FormulaR1C1 = "=SUM(9)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K14")
+        ActiveCell.FormulaR1C1 = "=SUM(6)"
+Application.Goto ActiveWorkbook.Sheets("Drops_Scheduling").Range("K15")
+        ActiveCell.FormulaR1C1 = "=SUM(134)"
+        MsgBox "Not Working Sunday; 1 Day CAP"
+
+End If
+End Sub
