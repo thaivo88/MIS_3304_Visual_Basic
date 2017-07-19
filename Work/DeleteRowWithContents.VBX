@@ -1,0 +1,12 @@
+Sub DeleteRowWithContents()
+
+' DELETES ALL ROWS FROM A2 DOWNWARDS WITH THE WORDs "OPTIONS" IN COLUMN Q For RVC Order Book
+
+    Last = Cells(Rows.Count, "Q").End(xlUp).Row
+    For i = Last To 1 Step -1
+        If (Cells(i, "Q").Value) = "Record Only" Then
+    'Cells(i, "A").EntireRow.ClearContents ' USE THIS TO CLEAR CONTENTS BUT NOT DELETE ROW
+            Cells(i, "A").EntireRow.Delete
+        End If
+    Next i
+End Sub
