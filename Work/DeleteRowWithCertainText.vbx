@@ -9,7 +9,7 @@ Dim WorkRng As Range
 Dim xStr As String
 
 On Error Resume Next
-xTitleId = "Deletion of Rows with Certain Text"
+xTitleId = "Deletion of Rows with Certain Text not containing the Text"
 
 Set WorkRng = Application.Selection
 Set WorkRng = Application.InputBox("Range", xTitleId, WorkRng.Address, Type:=8)
