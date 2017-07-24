@@ -4,7 +4,7 @@ Sub DeleteRowWithContents()
 
     Last = Cells(Rows.Count, "Q").End(xlUp).Row
     For i = Last To 1 Step -1
-        If (Cells(i, "Q").Value) = "Record Only" Then
+        If (Cells(i, "Q").Value) = "OPTIONS" Then
     'Cells(i, "A").EntireRow.ClearContents ' USE THIS TO CLEAR CONTENTS BUT NOT DELETE ROW
             Cells(i, "A").EntireRow.Delete
         End If
