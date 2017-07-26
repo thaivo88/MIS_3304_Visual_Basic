@@ -1,0 +1,15 @@
+Sub RVC5200DeletingPlants()
+'
+' RVC5200DeletingPlants Macro
+'
+
+'
+    ActiveSheet.Range("$A$1:$R$115656").AutoFilter Field:=7, Criteria1:=Array( _
+        "108", "109", "201", "3600", "5206", "5248", "5252", "52DM", "52IN", "9400", "AC01", _
+        "AL00", "HW00", "JK01", "JK03", "JK04", "JK05", "K101", "N100", "R600", "SRVC", "Z400"), _
+        Operator:=xlFilterValues
+    Rows("11:11").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Delete Shift:=xlUp
+    ActiveSheet.Range("$A$1:$R$26446").AutoFilter Field:=7
+End Sub
