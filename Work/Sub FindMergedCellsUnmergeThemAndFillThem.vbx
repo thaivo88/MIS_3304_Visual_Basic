@@ -1,0 +1,13 @@
+Sub FindMergedCellsUnmergeThemAndFillThem()
+  Dim MergedCell As Range, FirstAddress As String, MergeAddress As String, MergeValue As Variant
+  Application.FindFormat.MergeCells = True
+  Do
+    Set MergedCell = ActiveSheet.UsedRange.Find("", LookAt:=xlPart, SearchFormat:=True)
+    If MergedCell Is Nothing Then Exit Do
+    MergeValue = MergedCell.Value
+    MergeAddress = MergedCell.MergeArea.Address
+    MergedCell.MergeArea.UnMerge
+    Range(MergeAddress).Value = MergeValue
+  Loop
+  Application.FindFormat.Clear
+End Sub
