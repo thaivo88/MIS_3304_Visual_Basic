@@ -1,0 +1,9 @@
+'Macro class called RunAll, you can change the name to whatever
+'Macro1 to MacroN will be each Macro sub name you assigned to each
+'place in order you want the macros to run
+
+Sub RunAll()
+    Call Macro1 
+    Call Macro2
+    Call Macro3
+End Sub
