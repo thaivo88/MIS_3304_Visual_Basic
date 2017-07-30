@@ -1,4 +1,5 @@
 Sub FindMergedCellsUnmergeThemAndFillThem()
+'varible called MergedCell as Datatype Range
   Dim MergedCell As Range, FirstAddress As String, MergeAddress As String, MergeValue As Variant
   Application.FindFormat.MergeCells = True
   Do
