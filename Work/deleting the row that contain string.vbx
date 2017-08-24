@@ -1,6 +1,6 @@
 Sub Deletion_Total_Attendance_table()
 
-'deleting the row that contain 'totals'
+'deleting the row that contain 'STRING'
 
 Dim ws As Worksheet
 Dim rng1 As Range
@@ -9,7 +9,7 @@ Set rng1 = ws.Range(ws.[B2], ws.Cells(Rows.Count, "B").End(xlUp))
 Application.ScreenUpdating = False
 With ActiveSheet
         .AutoFilterMode = False
-        rng1.AutoFilter Field:=1, Criteria1:="Totals"
+        rng1.AutoFilter Field:=1, Criteria1:="'STRING'"
         rng1.Offset(1, 0).EntireRow.Delete
         .AutoFilterMode = False
     End With
