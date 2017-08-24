@@ -1,6 +1,6 @@
     Sub findLastRowAutoFill()
     
-    Dim LR As Long
+    Dim Lastrow As Long
     Lastrow = Range("B" & Rows.Count).End(xlUp).row
     
     Columns("D:D").EntireColumn.AutoFit
