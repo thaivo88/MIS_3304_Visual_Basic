@@ -1,0 +1,12 @@
+    Sub findLastRowAutoFill()
+    
+    Dim LR As Long
+    Lastrow = Range("B" & Rows.Count).End(xlUp).row
+    
+    Columns("D:D").EntireColumn.AutoFit
+    Range("E4").Select
+    ActiveCell.FormulaR1C1 = _
+        "=VLOOKUP(RC[-1],'[Updated Supervisor List Rev 2.xlsx]CLs'!R2C1:R267C2,2,0)"
+    Selection.AutoFill Destination:=Range("E4:E" & Lastrow)
+    
+    end sub
